@@ -1,22 +1,53 @@
 import React from 'react';
+import { FaPhone } from 'react-icons/fa6';
+import { MdOutlineEmail } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import HeaderDropdown from './HeaderDropdown';
 
 const Header = () => {
 	return (
 		<div className="w-screen fixed z-10">
-			<div className="flex justify-between px-50 py-3 bg-[#39ace7]">
-				<ul className="flex gap-5 text-white">
-					<li>+36201234567</li>
-					<li>test&test.com</li>
+			<div className="flex justify-center md:justify-start px-30 lg:px-50 py-3 bg-[#0784b5]">
+				<ul className="hidden gap-5 text-gray-100 md:flex font-bold">
+					<li>
+						<a href="tel:+36309227615"> +36309227615</a>
+					</li>
+					<li>
+						<a href="mailto:patyi.peter2000@gmail.com">patyi.peter2000@gmail.com</a>
+					</li>
+				</ul>
+				<ul className="flex justify-end gap-5 text-white md:hidden">
+					<li>
+						<a href="tel:+36309227615">
+							<FaPhone />
+						</a>
+					</li>
+					<li>
+						<a href="mailto:patyi.peter2000@gmail.com">
+							<MdOutlineEmail />
+						</a>
+					</li>
 				</ul>
 			</div>
-			<div className="flex justify-between px-50 py-5 bg-white align-middle text-black">
-				<h1 className="text-3xl font-black my-auto">Patyi Klíma</h1>
-				<ul className="flex gap-5 my-auto">
-					<li>Főoldal</li>
-					<li>Klímatisztítás árak</li>
-					<li>Galéria</li>
-					<li>Kapcsolat</li>
+			<div className="flex justify-between md:justify-between px-10 md:px-25 lg:px-50 py-5 bg-gray-100 items-center text-black h-30">
+				<h1 className="text-4xl font-bold text-gray-900 my-auto">Patyi Klíma</h1>
+				<ul className="hidden md:flex gap-5 items-center text-gray-900">
+					<li>
+						<Link to="/">Főoldal</Link>
+					</li>
+					<li>
+						<Link to="/arak">Klímatisztítás árak</Link>
+					</li>
+					<li>
+						<Link to="/arak">Galéria</Link>
+					</li>
+					<li className="p-3 bg-[#39ace7] rounded-md text-gray-100">
+						<Link to="/kapcsolat">Kapcsolat</Link>
+					</li>
 				</ul>
+				<div className="block md:hidden">
+					<HeaderDropdown />
+				</div>
 			</div>
 		</div>
 	);
