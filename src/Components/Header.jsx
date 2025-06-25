@@ -33,10 +33,27 @@ const Header = () => {
 				<h1 className="text-4xl font-bold text-gray-900 my-auto">Patyi Klíma</h1>
 				<ul className="hidden md:flex gap-5 items-center text-gray-900">
 					<li>
-						<Link to="/">Főoldal</Link>
+						<button
+							className="hover:cursor-pointer"
+							onClick={() => window.scrollTo({ top: 0 })}
+						>
+							Főoldal
+						</button>
 					</li>
 					<li>
-						<Link to="/arak">Klímatisztítás árak</Link>
+						<button
+							className="hover:cursor-pointer"
+							onClick={() => {
+								const element = document.getElementById('prices');
+								if (element) {
+									const yOffset = -200; // adjust based on your header height
+									const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+									window.scrollTo({ top: y, behavior: 'smooth' });
+								}
+							}}
+						>
+							Klímatisztítás árak
+						</button>
 					</li>
 					<li>
 						<Link to="/arak">Galéria</Link>

@@ -11,6 +11,7 @@ const Home = () => {
 			<HeroCards />
 			<Informative />
 			<Prices />
+			<div className="h-screen"></div>
 		</>
 	);
 };

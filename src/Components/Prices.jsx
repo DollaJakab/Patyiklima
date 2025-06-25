@@ -2,7 +2,10 @@ import React from 'react';
 
 const Prices = () => {
 	return (
-		<div className="h-screen bg-[#0784b5] flex flex-col items-center  py-12">
+		<div
+			id="prices"
+			className=" bg-[#0784b5] flex flex-col items-center  py-12"
+		>
 			<h1 className="text-3xl font-bold mb-8 text-white">💸 Klímatisztítás árlista</h1>
 			<div className="overflow-x-auto w-full max-w-2xl">
 				<table className="min-w-full border-collapse rounded-lg overflow-hidden shadow-lg bg-white text-gray-800">
