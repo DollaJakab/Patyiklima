@@ -1,12 +1,16 @@
 import React from 'react';
 import Hero from '../Components/Hero';
-import Section1 from '../Components/Section1';
+import HeroCards from '../Components/HeroCards';
+import Informative from '../Components/Informative';
+import Prices from '../Components/Prices';
 
 const Home = () => {
 	return (
 		<>
 			<Hero />
-			<Section1 />
+			<HeroCards />
+			<Informative />
+			<Prices />
 		</>
 	);
 };
