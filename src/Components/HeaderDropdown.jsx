@@ -28,18 +28,29 @@ const HeaderDropdown = () => {
 				<li>
 					<Link
 						to="/"
-						onClick={() => setIsOpen(false)}
+						onClick={() => {
+							setIsOpen(false);
+							window.scrollTo({ top: 0 });
+						}}
 					>
 						Főoldal
 					</Link>
 				</li>
 				<li>
-					<Link
-						to="/arak"
-						onClick={() => setIsOpen(false)}
+					<button
+						className="hover:cursor-pointer"
+						onClick={() => {
+							const element = document.getElementById('prices');
+							if (element) {
+								const yOffset = -200; // adjust based on your header height
+								const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+								window.scrollTo({ top: y, behavior: 'smooth' });
+								setIsOpen(false);
+							}
+						}}
 					>
 						Klímatisztítás árak
-					</Link>
+					</button>
 				</li>
 				<li>
 					<Link

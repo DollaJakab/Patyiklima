@@ -1,8 +1,8 @@
-import React from 'react';
 import Hero from '../Components/Hero';
 import HeroCards from '../Components/HeroCards';
 import Informative from '../Components/Informative';
 import Prices from '../Components/Prices';
+import Faq from '../Components/Faq';
 
 const Home = () => {
 	return (
@@ -11,7 +11,7 @@ const Home = () => {
 			<HeroCards />
 			<Informative />
 			<Prices />
-			<div className="h-screen"></div>
+			<Faq />
 		</>
 	);
 };

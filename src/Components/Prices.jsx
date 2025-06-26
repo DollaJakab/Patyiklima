@@ -4,7 +4,7 @@ const Prices = () => {
 	return (
 		<div
 			id="prices"
-			className=" bg-[#0784b5] flex flex-col items-center  py-12"
+			className=" bg-[#0784b5] flex flex-col items-center px-3  py-12"
 		>
 			<h1 className="text-3xl font-bold mb-8 text-white">💸 Klímatisztítás árlista</h1>
 			<div className="overflow-x-auto w-full max-w-2xl">

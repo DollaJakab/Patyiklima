@@ -1,10 +1,11 @@
 import React from 'react';
+import RotatingCard from './RotatingCard';
 
 const HeroCards = () => {
 	return (
 		<div className="relative mt-10">
-			<div className=" flex flex-row justify-evenly relative">
-				<div className="bg-[#0784b5] text-white min-h-[30vh] w-1/4  mt-[-15vh] rounded-lg p-5">
+			<div className=" flex flex-col md:flex-row gap-3 md:gap-0 mx-3 md:mx-0 justify-evenly relative">
+				<RotatingCard>
 					<span className="font-bold text-2xl">✳️A rendszeres karbantartás előnyei: </span>
 					<br />
 					<ul className="mt-2 flex flex-col gap-2 text-lg">
@@ -14,8 +15,8 @@ const HeroCards = () => {
 						<li>• Csökkenti az energiafogyasztást</li>
 						<li>• Csendesebb és hatékonyabb működés</li>
 					</ul>
-				</div>
-				<div className="bg-[#0784b5]  w-1/4  mt-[-15vh] rounded-lg p-5 text-gray-100">
+				</RotatingCard>
+				<RotatingCard>
 					<h1 className="font-bold text-2xl">🛠️Szolgáltatásaink:</h1>
 					<ul className="mt-2 flex flex-col gap-2 text-lg">
 						<li>• Vegyszeres tisztítás mosózsákkal</li>
@@ -23,7 +24,7 @@ const HeroCards = () => {
 						<li>• Penész, baktérium eltávolítás</li>
 						<li>• Cipővédő használata igény szerint</li>
 					</ul>
-				</div>
+				</RotatingCard>
 			</div>
 		</div>
 	);
