@@ -33,12 +33,13 @@ const Header = () => {
 				<h1 className="text-4xl font-bold text-gray-900 my-auto">Patyi Klíma</h1>
 				<ul className="hidden md:flex gap-5 items-center text-gray-900">
 					<li>
-						<button
+						<Link
+							to={'/'}
 							className="hover:cursor-pointer"
 							onClick={() => window.scrollTo({ top: 0 })}
 						>
 							Főoldal
-						</button>
+						</Link>
 					</li>
 					<li>
 						<button
@@ -59,7 +60,19 @@ const Header = () => {
 						<Link to="/arak">Galéria</Link>
 					</li>
 					<li className="p-3 bg-[#39ace7] rounded-md text-gray-100">
-						<Link to="/kapcsolat">Kapcsolat</Link>
+						<button
+							className="hover:cursor-pointer"
+							onClick={() => {
+								const element = document.getElementById('contact');
+								if (element) {
+									const yOffset = -150;
+									const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+									window.scrollTo({ top: y, behavior: 'smooth' });
+								}
+							}}
+						>
+							Kapcsolat
+						</button>
 					</li>
 				</ul>
 				<div className="block md:hidden">

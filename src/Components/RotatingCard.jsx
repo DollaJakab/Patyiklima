@@ -34,7 +34,7 @@ const RotatingCard = ({ children }) => {
 			<div
 				onMouseMove={handleMouseMove}
 				onMouseLeave={resetRotation}
-				className="bg-[#0784b5] text-white min-h-[30vh]  md:mt-[-15vh] rounded-lg p-5 transition-all duration-300 transform-gpu ease-in-out"
+				className="bg-[#0784b5] drop-shadow-2xl text-white min-h-[30vh] min-w-[20vw]  md:mt-[-15vh] rounded-lg p-5 transition-all duration-300 transform-gpu ease-in-out"
 				style={style}
 			>
 				{children}

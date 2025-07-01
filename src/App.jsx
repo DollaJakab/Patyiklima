@@ -1,9 +1,8 @@
-import Arak from './Pages/Arak';
 import Home from './Pages/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Kapcsolat from './Pages/Kapcsolat';
 import NoPage from './Pages/NoPage';
 import Layout from './Components/Layout';
+import Afsz from './Pages/Afsz';
 
 const App = () => {
 	return (
@@ -18,12 +17,8 @@ const App = () => {
 						element={<Home />}
 					/>
 					<Route
-						path="arak"
-						element={<Arak />}
-					/>
-					<Route
-						path="kapcsolat"
-						element={<Kapcsolat />}
+						path="afsz"
+						element={<Afsz />}
 					/>
 					<Route
 						path="*"
