@@ -27,12 +27,12 @@ const Informative = () => {
 				</div>
 				<img
 					src="/klima.png"
-					className="w-150 hidden md:block"
+					className="w-100 hidden md:block"
 				></img>
 			</div>
 			<div className=" mb-20 flex justify-between items-center">
 				<img
-					className="scale-x-[-1] hidden md:block"
+					className="scale-x-[-1] w-100 hidden md:block"
 					src="/klima2.png"
 					alt="klima"
 				/>
