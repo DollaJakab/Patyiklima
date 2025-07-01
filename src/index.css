@@ -5,8 +5,8 @@
 	font-family: 'Roboto', sans-serif;
 }
 
-main {
-	background-color: #f9fafb;
+body {
+	background-color: oklch(96.7% 0.003 264.542);
 }
 
 html {

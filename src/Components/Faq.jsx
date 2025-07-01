@@ -21,8 +21,8 @@ const Faq = () => {
 		},
 	];
 	return (
-		<div className="flex">
-			<div className="mb-10 flex flex-col justify-center items-start p-3 gap-0">
+		<div className="flex justify-center items-center bg-[#0784b5]">
+			<div className="my-10 flex flex-col justify-center items-center p-3 gap-0">
 				{data.map((question) => (
 					<FaqQuestion
 						key={question.question}

@@ -30,7 +30,12 @@ const Header = () => {
 				</ul>
 			</div>
 			<div className="flex justify-between md:justify-between px-10 md:px-25 lg:px-50 py-5 bg-gray-50 items-center text-black h-30">
-				<h1 className="text-4xl font-bold text-gray-900 my-auto">Patyi Klíma</h1>
+				<img
+					className="w-35"
+					src="./logo_small_2.png"
+					alt="logo"
+				/>
+				{/* <h1 className="text-4xl font-bold text-gray-900 my-auto">Patyi Klíma</h1> */}
 				<ul className="hidden md:flex gap-5 items-center text-gray-900">
 					<li>
 						<Link

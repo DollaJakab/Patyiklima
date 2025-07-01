@@ -61,12 +61,20 @@ const HeaderDropdown = () => {
 					</Link>
 				</li>
 				<li>
-					<Link
-						to="/kapcsolat"
-						onClick={() => setIsOpen(false)}
+					<button
+						className="hover:cursor-pointer"
+						onClick={() => {
+							setIsOpen(false);
+							const element = document.getElementById('contact');
+							if (element) {
+								const yOffset = -150;
+								const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+								window.scrollTo({ top: y, behavior: 'smooth' });
+							}
+						}}
 					>
 						Kapcsolat
-					</Link>
+					</button>
 				</li>
 			</ul>
 		</div>

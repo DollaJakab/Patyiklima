@@ -60,7 +60,9 @@ export default function Contact() {
 					onSubmit={handleSubmit(onSubmit)}
 				>
 					<h2 className="text-2xl font-semibold text-center mb-4">Kapcsolatfelvétel</h2>
-					<label htmlFor="name">Név</label>
+					<label htmlFor="name">
+						Név<span className="text-red-500">*</span>
+					</label>
 
 					<input
 						id="name"
@@ -69,7 +71,9 @@ export default function Contact() {
 						{...register('name')}
 						className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
 					/>
-					<label htmlFor="email">E-mail cím</label>
+					<label htmlFor="email">
+						E-mail cím<span className="text-red-500">*</span>
+					</label>
 					<input
 						id="email"
 						type="text"
@@ -77,7 +81,9 @@ export default function Contact() {
 						{...register('email')}
 						className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
 					/>
-					<label htmlFor="mobileNumber">Telefonszám</label>
+					<label htmlFor="mobileNumber">
+						Telefonszám<span className="text-red-500">*</span>
+					</label>
 					<input
 						id="mobileNumber"
 						type="text"
@@ -85,7 +91,9 @@ export default function Contact() {
 						{...register('mobileNumber')}
 						className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
 					/>
-					<label htmlFor="zip">Irányítószám</label>
+					<label htmlFor="zip">
+						Irányítószám<span className="text-red-500">*</span>
+					</label>
 					<input
 						max={4}
 						maxLength={4}
@@ -109,7 +117,7 @@ export default function Contact() {
 							type="checkbox"
 						/>
 						<p>
-							Elolvastam és elfogadom az{' '}
+							Elolvastam és elfogadom az&nbsp;
 							<Link
 								className="text-blue-500 underline"
 								to={'/afsz'}
@@ -118,6 +126,7 @@ export default function Contact() {
 							>
 								adatvédelmi nyilatkozatot.
 							</Link>
+							<span className="text-red-500">*</span>
 						</p>
 					</div>
 					<button

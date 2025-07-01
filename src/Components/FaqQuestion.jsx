@@ -4,7 +4,7 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 const FaqQuestion = ({ question, answer }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
-		<div className="p-3 text-gray-900 border-1 border-gray-400 not-last:border-b-0 md:max-w-1/2">
+		<div className="p-3 text-gray-900 border-1 border-gray-400 bg-white not-last:border-b-0 md:max-w-1/2">
 			<h1
 				onClick={() => setIsOpen(!isOpen)}
 				className="hover: cursor-pointer flex items-center gap-3 text-lg font-bold"
