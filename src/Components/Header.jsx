@@ -36,11 +36,11 @@ const Header = () => {
 					alt="logo"
 				/>
 				{/* <h1 className="text-4xl font-bold text-gray-900 my-auto">Patyi Klíma</h1> */}
-				<ul className="hidden md:flex gap-5 items-center text-gray-900">
+				<ul className="hidden md:flex gap-5 items-center text-gray-900 font-semibold">
 					<li>
 						<Link
 							to={'/'}
-							className="hover:cursor-pointer"
+							className="hover:cursor-pointer hover:text-[#39ace7] transition-all duration-300"
 							onClick={() => window.scrollTo({ top: 0 })}
 						>
 							Főoldal
@@ -48,7 +48,7 @@ const Header = () => {
 					</li>
 					<li>
 						<button
-							className="hover:cursor-pointer"
+							className="hover:cursor-pointer hover:text-[#39ace7] transition-all duration-300"
 							onClick={() => {
 								const element = document.getElementById('prices');
 								if (element) {
@@ -62,11 +62,16 @@ const Header = () => {
 						</button>
 					</li>
 					<li>
-						<Link to="/arak">Galéria</Link>
+						<Link
+							className="hover:text-[#39ace7] transition-all duration-300"
+							to="/arak"
+						>
+							Galéria
+						</Link>
 					</li>
-					<li className="p-3 bg-[#39ace7] rounded-md text-gray-100">
+					<li className="p-3 bg-[#39ace7] rounded-md text-gray-100 hover:scale-110 transition-all duration-300 ease-in-out">
 						<button
-							className="hover:cursor-pointer"
+							className="hover:cursor-pointer "
 							onClick={() => {
 								const element = document.getElementById('contact');
 								if (element) {
