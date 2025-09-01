@@ -4,6 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Link } from 'react-router-dom';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { SyncLoader } from 'react-spinners';
 
 const schema = z.object({
 	name: z.string().nonempty({ message: 'Required' }),
@@ -23,12 +24,14 @@ const schema = z.object({
 export default function Contact() {
 	const [capVal, setCapVal] = useState(null);
 	const [isSent, setIsSent] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
 
 	const { register, handleSubmit } = useForm({
 		resolver: zodResolver(schema),
 		shouldUseNativeValidation: true,
 	});
 	const onSubmit = async (data) => {
+		setIsLoading(true);
 		try {
 			const res = await fetch(import.meta.env.VITE_API_URL, {
 				method: 'POST',
@@ -44,9 +47,11 @@ export default function Contact() {
 				},
 			});
 			if (res.ok) {
+				setIsLoading(false);
 				setIsSent(true);
 			}
 		} catch (error) {
+			setIsLoading(false);
 			console.log(error);
 		}
 	};
@@ -54,11 +59,20 @@ export default function Contact() {
 	return (
 		<div
 			id="contact"
-			className="flex flex-col items-center justify-center min-h-[50vh] bg-gray-100 md:py-10"
+			className="flex relative flex-col items-center justify-center min-h-[50vh] bg-gray-100 md:py-10"
 		>
-			{!isSent ? (
+			{isSent ? (
+				<h1 className="relative text-xl md:text-4xl font-bold text-gray-900 bg-white mx-10 p-5 md:p-10 rounded-xl drop-shadow-md">
+					<p className="text-3xl md:text-4xl absolute top-[-20px] left-[-20px] rotate-[-15deg]">✅</p>
+					Elküldtük megkeresésed! Hamarosan felvesszük veled a kapcsolatot!
+				</h1>
+			) : isLoading ? (
+				<SyncLoader color="#39ace7" />
+			) : (
 				<form
-					className="bg-white p-6  rounded-2xl shadow-md md:w-[70vw]  space-y-4"
+					className={`bg-white p-6 relative  rounded-2xl shadow-md md:w-[70vw]  space-y-4 ${
+						isLoading && 'blur-xs'
+					}`}
 					onSubmit={handleSubmit(onSubmit)}
 				>
 					<h2 className="text-2xl font-semibold text-center mb-4">Kapcsolatfelvétel</h2>
@@ -148,11 +162,6 @@ export default function Contact() {
 						Küldés
 					</button>
 				</form>
-			) : (
-				<h1 className="relative text-xl md:text-4xl font-bold text-gray-900 bg-white mx-10 p-5 md:p-10 rounded-xl drop-shadow-md">
-					<p className="text-3xl md:text-4xl absolute top-[-20px] left-[-20px] rotate-[-15deg]">✅</p>
-					Elküldtük megkeresésed! Hamarosan felvesszük veled a kapcsolatot!
-				</h1>
 			)}
 		</div>
 	);

@@ -6,7 +6,7 @@ const Informative = () => {
 			<div className="flex flex-col md:flex-row items-center justify-between">
 				<div>
 					<h1 className="text-3xl font-bold relative">
-						<span className="absolute top-[-21px] left-[-26px] rotate-90">🔧</span> Mi hogyan dolgozunk?
+						<span className="absolute top-[-21px] left-[-26px] rotate-90">🔧</span>Hogyan dolgozunk?
 					</h1>
 
 					<h2 className="font-bold text-xl pt-2">Mi nem csak a szűrőket mossuk ki!</h2>
