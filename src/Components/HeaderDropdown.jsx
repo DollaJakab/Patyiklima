@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { Turn as Hamburger } from 'hamburger-react';
 
 const HeaderDropdown = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -17,11 +17,16 @@ const HeaderDropdown = () => {
 				aria-label="Toggle navigation menu"
 				className="text-2xl text-white"
 			>
-				<GiHamburgerMenu className="text-[#39ace7] text-4xl hover:cursor-pointer" />
+				<Hamburger
+					className="text-[#39ace7] text-4xl hover:cursor-pointer"
+					toggled={isOpen}
+					toggle={setIsOpen}
+					color="#39ace7"
+				/>
 			</button>
 
 			<ul
-				className={`absolute right-[-10px] mt-2 w-48 bg-[#39ace7] text-white p-3 text-lg rounded-lg shadow-lg transform transition-all duration-200 ease-in-out ${
+				className={`absolute right-0  mt-2 w-80 p-3 flex flex-col gap-2 bg-[#39ace7] text-white  text-xl rounded-lg shadow-lg transform transition-all duration-200 ease-in-out ${
 					isOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'
 				}`}
 			>

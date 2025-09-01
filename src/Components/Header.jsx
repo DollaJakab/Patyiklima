@@ -29,9 +29,9 @@ const Header = () => {
 					</li>
 				</ul>
 			</div>
-			<div className="flex justify-between md:justify-between px-5 md:px-25 lg:px-50 md:py-5 bg-gray-50 items-center text-black h-30">
+			<div className="flex justify-between md:justify-between px-5 md:px-25 lg:px-50 py-1 bg-gray-50 items-center text-black">
 				<img
-					className="md:w-35 w-20"
+					className="md:w-18 w-15"
 					src="./logo_small_2.png"
 					alt="logo"
 				/>
