@@ -3,7 +3,7 @@ import React from 'react';
 const Hero = () => {
 	return (
 		<div className="realtive bg-black h-screen overflow-hidden pt-20">
-			<div className="absolute inset-0 bg-cover bg-center opacity-45 h-full bg-[url(https://www.hurleyanddavid.com/wp-content/uploads/2022/05/hurley-david-ac-technician-min-1.jpg)] blur-xs"></div>
+			<div className="absolute inset-0 bg-cover bg-center opacity-45 h-full bg-[url(/1.jpeg)] blur-xs"></div>
 			<div className="relative z-0 flex flex-col text-white items-center justify-center h-full">
 				<div className="flex flex-col gap-10">
 					<span className="px-4">
