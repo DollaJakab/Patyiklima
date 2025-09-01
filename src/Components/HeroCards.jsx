@@ -9,11 +9,11 @@ const HeroCards = () => {
 					<span className="font-bold text-2xl">✳️A rendszeres karbantartás előnyei: </span>
 					<br />
 					<ul className="mt-2 flex flex-col gap-2 text-lg">
-						<li>• Egészségesebb, frissebb levegő otthonában</li>
-						<li>• Megelőzhető a penész és baktérium elszaporodása </li>
-						<li>• Meghosszabbítja a klíma élettartamát </li>
 						<li>• Csökkenti az energiafogyasztást</li>
+						<li>• Meghosszabbítja a klíma élettartamát </li>
+						<li>• Megelőzhető a penész és baktérium elszaporodása </li>
 						<li>• Csendesebb és hatékonyabb működés</li>
+						<li>• Friss levegő otthonában</li>
 					</ul>
 				</RotatingCard>
 				<RotatingCard>

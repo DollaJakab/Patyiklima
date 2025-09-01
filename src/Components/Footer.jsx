@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
-		<div className="max-w-[50vw] mx-auto pt-10 flex flex-col gap-5 mb-3 text-[#0784b5] font-bold border-t-1">
-			<div className="flex justify-between ">
+		<div className="max-w-[90vw] md:max-w-[50vw] mx-auto md:pt-10 flex flex-col gap-5 mb-3 text-[#0784b5] font-bold border-t-1">
+			<div className="flex justify-between md:flex-row flex-col md:gap-0 gap-5">
 				<div>
 					<img
-						className="w-75"
+						className="w-75 md:block hidden"
 						src="/logo.png"
 						alt="logo"
 					/>
@@ -25,7 +25,7 @@ const Footer = () => {
 							<FaPhone /> +36309227615
 						</p>
 						<p className="flex items-center gap-2">
-							<IoIosMail /> patyi.peter2000@gmail.com
+							<IoIosMail /> patyiklima@gmail.com
 						</p>
 					</div>
 				</div>
@@ -40,8 +40,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex justify-center gap-3 font-normal">
-				<p>©Patyiklíma - Minden jog fenntartva | Made by Dolla Jakab</p>
+			<div className="flex flex-col md:flex-row justify-center gap-3 font-normal">
 				<div>
 					<Link
 						className="font-bold"
@@ -56,6 +55,7 @@ const Footer = () => {
 						Impresszum
 					</Link>
 				</div>
+				<p>©Patyiklíma - Minden jog fenntartva | Made by Dolla Jakab</p>
 			</div>
 		</div>
 	);

@@ -3,7 +3,7 @@ import React from 'react';
 const Informative = () => {
 	return (
 		<div className="flex flex-col gap-10 mt-20 mx-10 md:mx-30 text-gray-900">
-			<div className="flex items-center justify-between">
+			<div className="flex flex-col md:flex-row items-center justify-between">
 				<div>
 					<h1 className="text-3xl font-bold relative">
 						<span className="absolute top-[-21px] left-[-26px] rotate-90">🔧</span> Mi hogyan dolgozunk?
@@ -11,12 +11,9 @@ const Informative = () => {
 
 					<h2 className="font-bold text-xl pt-2">Mi nem csak a szűrőket mossuk ki!</h2>
 					<ul className="text-lg pl-3 pt-3">
+						<li>✅ A beltéri egységet mosózsákkal burkoljuk be</li>
 						<li>
-							✅ A beltéri egységet mosózsákkal burkoljuk be, hogy a tisztítás során ne szennyeződjön a
-							környezet
-						</li>
-						<li>
-							✅ Ezt követően speciális vegyszerrel és magasnyomású technikával alaposan átmossuk a teljes
+							✅ Ezt követően speciális vegyszerrel és magasnyomású mosóval alaposan kitisztítjuk a teljes
 							beltéri egységet
 						</li>
 						<li>
@@ -27,7 +24,7 @@ const Informative = () => {
 				</div>
 				<img
 					src="/klima.png"
-					className="w-100 hidden md:block"
+					className="w-100  md:block"
 				></img>
 			</div>
 			<div className=" mb-20 flex justify-between items-center">
@@ -45,7 +42,7 @@ const Informative = () => {
 						<li>🔹 A kiszállás díját</li>
 						<li>🔹 Parkolási díjat</li>
 						<li>🔹 Igény esetén cipővédő használatát</li>
-						<li>🔹 A rendszer működésének ellenőrzését és cseppvízelvezető tisztítását is</li>
+						<li>🔹 A rendszer működésének ellenőrzését</li>
 					</ul>
 				</div>
 			</div>

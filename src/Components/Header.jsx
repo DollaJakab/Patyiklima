@@ -13,7 +13,7 @@ const Header = () => {
 						<a href="tel:+36309227615"> +36309227615</a>
 					</li>
 					<li>
-						<a href="mailto:patyi.peter2000@gmail.com">patyi.peter2000@gmail.com</a>
+						<a href="mailto:patyiklima@gmail.com">patyiklima@gmail.com</a>
 					</li>
 				</ul>
 				<ul className="flex justify-end gap-5 text-white md:hidden">
@@ -23,15 +23,15 @@ const Header = () => {
 						</a>
 					</li>
 					<li>
-						<a href="mailto:patyi.peter2000@gmail.com">
+						<a href="mailto:patykilma@gmail.com">
 							<MdOutlineEmail />
 						</a>
 					</li>
 				</ul>
 			</div>
-			<div className="flex justify-between md:justify-between px-10 md:px-25 lg:px-50 py-5 bg-gray-50 items-center text-black h-30">
+			<div className="flex justify-between md:justify-between px-10 md:px-25 lg:px-50 md:py-5 bg-gray-50 items-center text-black h-30">
 				<img
-					className="w-35"
+					className="md:w-35 w-20"
 					src="./logo_small_2.png"
 					alt="logo"
 				/>
