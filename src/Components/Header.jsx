@@ -29,7 +29,7 @@ const Header = () => {
 					</li>
 				</ul>
 			</div>
-			<div className="flex justify-between md:justify-between px-10 md:px-25 lg:px-50 md:py-5 bg-gray-50 items-center text-black h-30">
+			<div className="flex justify-between md:justify-between px-5 md:px-25 lg:px-50 md:py-5 bg-gray-50 items-center text-black h-30">
 				<img
 					className="md:w-35 w-20"
 					src="./logo_small_2.png"
@@ -61,14 +61,14 @@ const Header = () => {
 							Klímatisztítás árak
 						</button>
 					</li>
-					<li>
+					{/*<li>
 						<Link
 							className="hover:text-[#39ace7] transition-all duration-300"
 							to="/arak"
 						>
 							Galéria
 						</Link>
-					</li>
+					</li>*/}
 					<li className="p-3 bg-[#39ace7] rounded-md text-gray-100 hover:scale-110 transition-all duration-300 ease-in-out">
 						<button
 							className="hover:cursor-pointer "

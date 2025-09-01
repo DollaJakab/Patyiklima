@@ -21,7 +21,7 @@ const HeaderDropdown = () => {
 			</button>
 
 			<ul
-				className={`absolute right-0 mt-2 w-48 bg-[#39ace7] text-white p-4 rounded-lg shadow-lg transform transition-all duration-200 ease-in-out ${
+				className={`absolute right-[-10px] mt-2 w-48 bg-[#39ace7] text-white p-3 text-lg rounded-lg shadow-lg transform transition-all duration-200 ease-in-out ${
 					isOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'
 				}`}
 			>
@@ -52,7 +52,7 @@ const HeaderDropdown = () => {
 						Klímatisztítás árak
 					</button>
 				</li>
-				<li>
+				{/*<li>
 					<Link
 						to="/galeria"
 						onClick={() => setIsOpen(false)}
@@ -60,6 +60,7 @@ const HeaderDropdown = () => {
 						Galéria
 					</Link>
 				</li>
+				*/}
 				<li>
 					<button
 						className="hover:cursor-pointer"
